@@ -1,0 +1,991 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Product Cards</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    
+<style>
+body {
+    background: #f8f9fa;
+}
+
+.card img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: gray;
+    margin-left: 8px;
+}
+
+.discount {
+    color: green;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.badge-top {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.heart-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+.footer{
+    background-color: #f3eaea;
+}
+.footer-title {
+      color: red;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .footer a {
+      text-decoration: none;
+      color: #555;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .footer a:hover {
+      color: black;
+    }
+
+    .icon-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+    .icon-circle img{
+        object-fit: contain;
+        width: 40px;
+        height: 40px;
+        
+    }
+
+    .bottom-strip img {
+      height: 25px;
+      margin-right: 10px;
+    }
+
+     body {
+        font-family: Arial, sans-serif;
+    }
+
+    /* Top header */
+    .top-header{
+    background-color: rgb(245, 220, 220);
+    height:100px;
+    display:flex;
+    align-items:center;
+    padding:10px 20px;
+
+}
+
+.logo{
+    height:100%;
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    height:100%;   
+    width:100%;  
+   object-fit: contain;
+}
+    .search-box {
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .search-box input {
+        border-radius: 50px;
+        padding-left: 40px;
+        height: 45px;
+    }
+
+    .search-box i {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: gray;
+    }
+
+    .header-icons i {
+        font-size: 20px;
+        margin-right: 15px;
+        cursor: pointer;
+    }
+    .main-menu {
+        border-top: 1px solid #e5e5e5;
+        background: #ecd073;
+        
+    }
+
+    .main-menu .nav-link {
+        color: #000;
+        font-weight: 500;
+        padding: 12px 15px;
+    }
+
+    .main-menu .nav-link:hover {
+        color: #555;
+    }
+</style>
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+    
+    <!-- Top Header -->
+<div class="top-header">
+    <div class="container">
+        
+        <div class="row align-items-center">
+
+            <!-- Logo -->
+            <div class="col-md-3 col-6">
+                <div class="logo"><a href="index.html"><img src="image/logo last.png"></a></div>
+            </div>
+
+            <!-- Search -->
+            <div class="col-md-6 d-none d-md-block">
+                <div class="search-box position-relative">
+                    <i class="bi bi-search"></i>
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+            </div>
+
+            <!-- Icons -->
+            <div class="col-md-3 col-6 text-end header-icons">
+                <i class="bi bi-heart"></i>
+                <i class="bi bi-bag"></i>
+                <span class="ms-2">Sign in</span>
+            </div>
+
+        </div>
+    </div>
+</div>
+  <nav class="main-menu">
+    <div class="container">
+        <ul class="nav justify-content-center">
+
+             <li class="nav-item"><a class="nav-link dropdown-toggle" href="#"data-bs-toggle="dropdown">
+            Women
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="womentop.html" target="_blank">Women's Top Wear</a></li>
+            <li><a class="dropdown-item" href="womenbottom.html" target="_blank">Women's Bottom Wear</a></li>
+            <li><a class="dropdown-item" href="#">Women Ethinic</a></li>
+            <li><a class="dropdown-item" href="#">Women's Footwear</a></li>
+           <li><a class="dropdown-item" href="#">Watch and Accessories</a></li>
+            <li><a class="dropdown-item" href="#"> women Western</a></li>
+            <li><a class="dropdown-item" href="#">Bags. Suitcse $ Luggage</a></li>
+            <li><a class="dropdown-item" href="#">Kids</a></li>
+            <li><a class="dropdown-item" href="#">Essentials</a></li>
+            <li><a class="dropdown-item" href="#"> Women's Winter</a></li>
+          </ul> 
+         </li>
+
+
+
+            <li class="nav-item"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Man</a>
+             <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="men.html" target="_blank">Men's Top Wear</a></li>
+            <li><a class="dropdown-item" href="menbottom.html" target="_blank">men's Bottom Wear</a></li>
+            <li><a class="dropdown-item" href="#">Men's Ethinic</a></li>
+            <li><a class="dropdown-item" href="#">Men Footwear</a></li>
+            <li><a class="dropdown-item" href="#">Watch and Accessories</a></li>
+            <li><a class="dropdown-item" href="#"> Men's Shirt </a></li>
+            <li><a class="dropdown-item" href="#">Bags. Suitcse $ Luggage</a></li>
+            <li><a class="dropdown-item" href="#">Essentials</a></li>
+            <li><a class="dropdown-item" href="#">Men's Winter</a></li> 
+             </ul>
+             </li>
+
+             
+             <li class="nav-item"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Kids</a>
+             <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Kid's Top Wear</a></li>
+            <li><a class="dropdown-item" href="#">Kid's Bottom Wear</a></li>
+            <li><a class="dropdown-item" href="#">Kid's Footwear</a></li>
+            <li><a class="dropdown-item" href="#">Toys </a></li>
+           <li><a class="dropdown-item" href="#">Kids Gift</a></li>
+            <li><a class="dropdown-item" href="#">Essentials</a></li>
+            <li><a class="dropdown-item" href="#">Kid's Winter</a></li>  
+             </ul>
+             </li>
+
+            <li class="nav-item"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Beauty</a>
+             <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Makeup</a></li>
+            <li><a class="dropdown-item" href="#">Skin</a></li>
+            <li><a class="dropdown-item" href="#">Hair</a></li>
+            <li><a class="dropdown-item" href="#">Bath & Body</a></li>
+            <li><a class="dropdown-item" href="#">Health & Wellness</a></li>
+            <li><a class="dropdown-item" href="#"> Men </a></li>
+            <li><a class="dropdown-item" href="#">Fragrance</a></li>
+            <li><a class="dropdown-item" href="#">Lingerie & Accessories</a></li>
+             </ul>
+             </li>
+
+             <li class="nav-item"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Fine Jewellery</a>
+             <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Necklece set</a></li>
+            <li><a class="dropdown-item" href="#">Pandent</a></li>
+            <li><a class="dropdown-item" href="#">Earing </a></li>
+            <li><a class="dropdown-item" href="#">Ring</a></li>
+            <li><a class="dropdown-item" href="#">Everyday Essentials</a></li>
+            <li><a class="dropdown-item" href="#">Bangals</a></li>
+             </ul>
+             </li>
+
+             <li class="nav-item"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Home</a>
+             <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Wall paintings / wall art</a></li>
+            <li><a class="dropdown-item" href="homedecore.html" target="_blank">Wall mirrors</a></li>
+            <li><a class="dropdown-item" href="homedecore.html" target="_blank">Clocks</a></li>
+            <li><a class="dropdown-item" href="homedecore.html" target="_blank">Statues & figurinesr</a></li>
+            <li><a class="dropdown-item" href="homedecore.html" target="_blank">Indoor plants / artificial plants</a></li>
+            <li><a class="dropdown-item" href="homedecore.html" target="_blank">Table lamps / floor lamps</a></li>
+             </ul>
+             </li>
+
+             <li class="nav-item"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Gift Shop</a>
+             <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Flower</a></li>
+            <li><a class="dropdown-item" href="#">Cake</a></li>
+            <li><a class="dropdown-item" href="#">Taddy wear</a></li>
+            <li><a class="dropdown-item" href="#">Gift Hanp</a></li>
+            <li><a class="dropdown-item" href="#">perfumes</a></li>
+            <li><a class="dropdown-item" href="#">Watch and Accessories</a></li>
+            <li><a class="dropdown-item" href="#"> women Western</a></li>
+            </ul>
+             </li>
+
+            <li class="nav-item"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Sneaker</a>
+             <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="Sneaker.html" target="_blank">Nike</a></li>
+            <li><a class="dropdown-item" href="Sneaker.html" target="_blank">Adidas</a></li>
+            <li><a class="dropdown-item" href="Sneaker.html" target="_blank">Red tap</a></li>
+            <li><a class="dropdown-item" href="Sneaker.html" target="_blank">PUMA</a></li>
+            <li><a class="dropdown-item" href="Sneaker.html" target="_blank">H&M</a></li>
+            <li><a class="dropdown-item" href="Sneaker.html" target="_blank">Bata</a></li>
+            <li><a class="dropdown-item" href="Sneaker.html" target="_blank"> Campus</a></li>
+            </ul>
+             </li>
+          
+             <li class="nav-item"><a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">View more</a>
+             <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">ToothPaste</a></li>
+            <li><a class="dropdown-item" href="#">Toothbrush</a></li>
+            <li><a class="dropdown-item" href="#">Towel</a></li>
+            <li><a class="dropdown-item" href="#">Soap</a></li>
+            <li><a class="dropdown-item" href="#">Shampoo</a></li>
+            <li><a class="dropdown-item" href="#">Face wash</a></li>
+            <li><a class="dropdown-item" href="#"> Body Lotion</a></li>
+            <li><a class="dropdown-item" href="#">Tissue Paper</a></li>
+            </ul>
+             </li>
+          
+
+        </ul>
+    </div>
+</nav>
+
+<div class="container py-4">
+<div class="row g-4">
+
+<!-- CARD 1 -->
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+    <i class="bi bi-heart heart-icon"></i>
+    <img src="image/wall painting" class="card-img-top">
+    <div class="card-body">
+      <h6>Aura Buffet Organizer - Gold</h6>
+      <p class="text-muted">Metal</p>
+
+      <div>
+        <span class="price">₹2,849</span>
+        <span class="old-price">₹4,390</span>
+        <span class="discount">36% OFF</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- CARD 2 -->
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+
+
+    <i class="bi bi-heart heart-icon"></i>
+
+    <img src="image/home-1.jpg" class="card-img-top">
+
+    <div class="card-body">
+      <h6>Ebna Floral Serving Tray - Set Of Three</h6>
+      <p class="text-muted">MDF</p>
+
+      <div>
+        <span class="price">₹799</span>
+        <span class="old-price">₹1,399</span>
+        <span class="discount">43% OFF</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- CARD 3 -->
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+
+    <i class="bi bi-heart heart-icon"></i>
+
+    <img src="image/home-2.jpg" class="card-img-top">
+
+    <div class="card-body">
+      <h6>Blue City Serving Tray - Set Of Three</h6>
+      <p class="text-muted">Melamine</p>
+
+      <div>
+        <span class="price">₹856</span>
+        <span class="old-price">₹1,095</span>
+        <span class="discount">22% OFF</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- CARD 4 -->
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+
+    <i class="bi bi-heart heart-icon"></i>
+
+    <img src="image/home-3.jpg" class="card-img-top">
+
+    <div class="card-body">
+      <h6>Harbor Style Wood Serving Platter</h6>
+      <p class="text-muted">Wood</p>
+
+      <div>
+        <span class="price">₹2,400</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- CARD 1 -->
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+    <i class="bi bi-heart heart-icon"></i>
+    <img src="image/home-4.jpg" class="card-img-top">
+    <div class="card-body">
+      <h6>Aura Buffet Organizer - Gold</h6>
+      <p class="text-muted">Metal</p>
+
+      <div>
+        <span class="price">₹2,849</span>
+        <span class="old-price">₹4,390</span>
+        <span class="discount">36% OFF</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- CARD 2 -->
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+
+
+    <i class="bi bi-heart heart-icon"></i>
+
+    <img src="image/home-5.jpg" class="card-img-top">
+
+    <div class="card-body">
+      <h6>Ebna Floral Serving Tray - Set Of Three</h6>
+      <p class="text-muted">MDF</p>
+
+      <div>
+        <span class="price">₹799</span>
+        <span class="old-price">₹1,399</span>
+        <span class="discount">43% OFF</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- CARD 3 -->
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+
+    <i class="bi bi-heart heart-icon"></i>
+
+    <img src="image/home-6.jpg" class="card-img-top">
+
+    <div class="card-body">
+      <h6>Blue City Serving Tray - Set Of Three</h6>
+      <p class="text-muted">Melamine</p>
+
+      <div>
+        <span class="price">₹856</span>
+        <span class="old-price">₹1,095</span>
+        <span class="discount">22% OFF</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- CARD 4 -->
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+
+    <i class="bi bi-heart heart-icon"></i>
+
+    <img src="image/home-7.jpg" class="card-img-top">
+
+    <div class="card-body">
+      <h6>Harbor Style Wood Serving Platter</h6>
+      <p class="text-muted">Wood</p>
+
+      <div>
+        <span class="price">₹2,400</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+<!-- CARD 1 -->
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+    <i class="bi bi-heart heart-icon"></i>
+    <img src="image/home-8.jpg" class="card-img-top">
+    <div class="card-body">
+      <h6>Aura Buffet Organizer - Gold</h6>
+      <p class="text-muted">Metal</p>
+
+      <div>
+        <span class="price">₹2,849</span>
+        <span class="old-price">₹4,390</span>
+        <span class="discount">36% OFF</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- CARD 2 -->
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+
+
+    <i class="bi bi-heart heart-icon"></i>
+
+    <img src="image/home-9.jpg" class="card-img-top">
+
+    <div class="card-body">
+      <h6>Ebna Floral Serving Tray - Set Of Three</h6>
+      <p class="text-muted">MDF</p>
+
+      <div>
+        <span class="price">₹799</span>
+        <span class="old-price">₹1,399</span>
+        <span class="discount">43% OFF</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- CARD 3 -->
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+
+    <i class="bi bi-heart heart-icon"></i>
+
+    <img src="image/home-21.jpg" class="card-img-top">
+
+    <div class="card-body">
+      <h6>Blue City Serving Tray - Set Of Three</h6>
+      <p class="text-muted">Melamine</p>
+
+      <div>
+        <span class="price">₹856</span>
+        <span class="old-price">₹1,095</span>
+        <span class="discount">22% OFF</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- CARD 4 -->
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+
+    <i class="bi bi-heart heart-icon"></i>
+
+    <img src="image/home-20.jpg" class="card-img-top">
+
+    <div class="card-body">
+      <h6>Harbor Style Wood Serving Platter</h6>
+      <p class="text-muted">Wood</p>
+
+      <div>
+        <span class="price">₹2,400</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+<!-- CARD 1 -->
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+    <i class="bi bi-heart heart-icon"></i>
+    <img src="image/home-12.jpg" class="card-img-top">
+    <div class="card-body">
+      <h6>Aura Buffet Organizer - Gold</h6>
+      <p class="text-muted">Metal</p>
+
+      <div>
+        <span class="price">₹2,849</span>
+        <span class="old-price">₹4,390</span>
+        <span class="discount">36% OFF</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- CARD 2 -->
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+
+
+    <i class="bi bi-heart heart-icon"></i>
+
+    <img src="image/home-13.jpg" class="card-img-top">
+
+    <div class="card-body">
+      <h6>Ebna Floral Serving Tray - Set Of Three</h6>
+      <p class="text-muted">MDF</p>
+
+      <div>
+        <span class="price">₹799</span>
+        <span class="old-price">₹1,399</span>
+        <span class="discount">43% OFF</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- CARD 3 -->
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+
+    <i class="bi bi-heart heart-icon"></i>
+
+    <img src="image/home-14.jpg" class="card-img-top">
+
+    <div class="card-body">
+      <h6>Blue City Serving Tray - Set Of Three</h6>
+      <p class="text-muted">Melamine</p>
+
+      <div>
+        <span class="price">₹856</span>
+        <span class="old-price">₹1,095</span>
+        <span class="discount">22% OFF</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- CARD 4 -->
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+
+    <i class="bi bi-heart heart-icon"></i>
+
+    <img src="image/home-15.jpg" class="card-img-top">
+
+    <div class="card-body">
+      <h6>Harbor Style Wood Serving Platter</h6>
+      <p class="text-muted">Wood</p>
+
+      <div>
+        <span class="price">₹2,400</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+<!-- CARD 1 -->
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+    <i class="bi bi-heart heart-icon"></i>
+    <img src="image/home-16.jpg" class="card-img-top">
+    <div class="card-body">
+      <h6>Aura Buffet Organizer - Gold</h6>
+      <p class="text-muted">Metal</p>
+
+      <div>
+        <span class="price">₹2,849</span>
+        <span class="old-price">₹4,390</span>
+        <span class="discount">36% OFF</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- CARD 2 -->
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+
+
+    <i class="bi bi-heart heart-icon"></i>
+
+    <img src="image/home-17.jpg" class="card-img-top">
+
+    <div class="card-body">
+      <h6>Ebna Floral Serving Tray - Set Of Three</h6>
+      <p class="text-muted">MDF</p>
+
+      <div>
+        <span class="price">₹799</span>
+        <span class="old-price">₹1,399</span>
+        <span class="discount">43% OFF</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- CARD 3 -->
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+
+    <i class="bi bi-heart heart-icon"></i>
+
+    <img src="image/home-18.jpg" class="card-img-top">
+
+    <div class="card-body">
+      <h6>Blue City Serving Tray - Set Of Three</h6>
+      <p class="text-muted">Melamine</p>
+
+      <div>
+        <span class="price">₹856</span>
+        <span class="old-price">₹1,095</span>
+        <span class="discount">22% OFF</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+
+    <i class="bi bi-heart heart-icon"></i>
+
+    <img src="image/home-23.jpg" class="card-img-top">
+
+    <div class="card-body">
+      <h6>Blue City Serving Tray - Set Of Three</h6>
+      <p class="text-muted">Melamine</p>
+
+      <div>
+        <span class="price">₹856</span>
+        <span class="old-price">₹1,095</span>
+        <span class="discount">22% OFF</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+
+    <i class="bi bi-heart heart-icon"></i>
+
+    <img src="image/home-22.jpg" class="card-img-top">
+
+    <div class="card-body">
+      <h6>Blue City Serving Tray - Set Of Three</h6>
+      <p class="text-muted">Melamine</p>
+
+      <div>
+        <span class="price">₹856</span>
+        <span class="old-price">₹1,095</span>
+        <span class="discount">22% OFF</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- CARD 4 -->
+<div class="col-xl-3 col-lg-4 col-md-6 col-6">
+  <div class="card h-100 position-relative">
+
+    <i class="bi bi-heart heart-icon"></i>
+
+    <img src="image/home-19.jpg" class="card-img-top">
+
+    <div class="card-body">
+      <h6>Harbor Style Wood Serving Platter</h6>
+      <p class="text-muted">Wood</p>
+
+      <div>
+        <span class="price">₹2,400</span>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white border-0">
+      <button class="btn btn-outline-dark w-100">Add To Cart</button>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+
+<!-- --------------------------footer-------------------------------------- -->
+ <footer class="footer pt-5">
+
+  <div class="container">
+
+    <div class="row">
+
+      <!-- NEED HELP -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="footer-title">Need Help</div>
+        <a href="#">Contact Us</a>
+        <a href="#">Track Order</a>
+        <a href="#">Returns & Refunds</a>
+        <a href="#">FAQs</a>
+        <a href="#">My Account</a>
+
+        <p class="mt-3">💰 COD Available</p>
+        <p>🔄 30 Days Easy Returns</p>
+      </div>
+
+      <!-- COMPANY -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="footer-title">Company</div>
+        <a href="#">About Us</a>
+        <a href="#">Investor Relation</a>
+        <a href="#">Careers</a>
+        <a href="#">Gift Vouchers</a>
+        <a href="#">Community Initiatives</a>
+      </div>
+
+      <!-- MORE INFO -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="footer-title">More Info</div>
+        <a href="#">T&C</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Sitemap</a>
+        <a href="#">Get Notified</a>
+        <a href="#">Blogs</a>
+      </div>
+
+      <!-- STORE -->
+      <div class="col-6 col-md-3 mb-4">
+        <div class="footer-title">Store Near Me</div>
+        <a href="#">Mumbai</a>
+        <a href="#">Pune</a>
+        <a href="#">Bangalore</a>
+        <a href="#">Delhi</a>
+        <a href="#" class="text-primary">View More</a>
+      </div>
+
+    </div>
+
+    <!-- APP DOWNLOAD -->
+    <div class="text-center my-4">
+      <p class="fw-bold">Experience the Souled Store App</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" height="45">
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" height="45">
+    </div>
+
+    <!-- SOCIAL -->
+    <div class="d-flex justify-content-end align-items-center gap-3 mb-4">
+      <span>Follow Us:</span>
+
+      <div class="icon-circle bg-facebook"><img src="image/download.png"></div>
+      <div class="icon-circle bg-instagram"><img src="image/instagram.png"></div>
+      <div class="icon-circle bg-snapchat"><img src="image/download (1).png"></div>
+      <div class="icon-circle bg-x"><img src="image/download (2).png"></div>
+    </div>
+
+    <!-- COLLAPSIBLE -->
+    <div class="border p-3 mb-4">
+      <div class="d-flex justify-content-between">
+        <strong class="text-danger">WHO WE ARE</strong>
+        <button class="btn btn-sm btn-outline-danger" data-bs-toggle="collapse" data-bs-target="#whoWeAre">+</button>
+      </div>
+
+      <div class="collapse mt-3" id="whoWeAre">
+        <p>This is a demo description about the company.</p>
+      </div>
+    </div>
+
+    <!-- BOTTOM STRIP -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center bottom-strip pb-3">
+
+      <div class="mb-2 mb-md-0">
+        <span>100% Secure Payment:</span>
+        <img src="https://img.icons8.com/color/48/visa.png"/>
+        <img src="https://img.icons8.com/color/48/mastercard.png"/>
+        <img src="https://img.icons8.com/color/48/paytm.png"/>
+      </div>
+
+      <div>
+        <span>Shipping Partners:</span>
+        <img src="https://img.icons8.com/color/48/dhl.png"/>
+        <img src="https://img.icons8.com/color/48/fedex.png"/>
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
+
