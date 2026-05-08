@@ -225,6 +225,56 @@ text-align:center;
 .sale-box h5{
     font-size: 20px;
 }
+
+  .top-header{
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap; 
+        min-height: auto;
+       }  
+
+    .logo{
+        width: 100px;
+        height: 100px;
+        } 
+
+  .logo img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .search-box{
+        width: 200px;
+        flex: 1;
+      }
+
+    .search-box input{
+        height: 35px;
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .header-icons{
+        display: flex;
+        /* gap: 5px; */
+        align-items: center;
+      }
+
+    .header-icons span{
+        font-size: 12px;
+    }
+
+    .header-icons i{
+        font-size: 14px;
+    }
+   .header-icons{
+    white-space: nowrap;
+   } 
+  .main-menu .nav-link{
+    font-size: 10px;
+    line-height: 0;
+  }       
    }
   </style>
 </head>
@@ -240,24 +290,30 @@ text-align:center;
         <div class="row align-items-center">
 
             <!-- Logo -->
-            <div class="col-md-3 col-6">
-                <div class="logo"><img src="image/logo last.png"></div>
-            </div>
+           <div class="top-header">
+    <div class="container">
 
-            <!-- Search -->
-            <div class="col-md-6 d-none d-md-block">
-                <div class="search-box position-relative">
-                    <i class="bi bi-search"></i>
-                    <input type="text" class="form-control" placeholder="Search">
-                </div>
-            </div>
+      <div class="row align-items-center">
 
-            <!-- Icons -->
-            <div class="col-md-3 col-6 text-end header-icons">
-                <i class="bi bi-heart"></i>
-                <i class="bi bi-bag"></i>
-                <span class="ms-2">Sign in</span>
-            </div>
+        <!-- Logo -->
+        <div class="col-md-3 col-2">
+          <div class="logo"><img src="image/logo last.png"></div>
+        </div>
+
+        <!-- Search -->
+        <div class="col-md-6 col-7 mt-3 mt-md-0">
+          <div class="search-box position-relative">
+            <i class="bi bi-search"></i>
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+        </div>
+
+        <!-- Icons -->
+        <div class="col-md-3 col-3 text-end header-icons">
+          <i class="bi bi-heart"></i>
+          <i class="bi bi-bag"></i>
+          <span class="ms-2">Sign in</span>
+        </div>
 
         </div>
     </div>
