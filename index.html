@@ -190,6 +190,12 @@
       height: 25px;
       margin-right: 10px;
     }
+    .closeSearch{
+      display: none;
+    }
+    .bi-search{
+      display: none;
+    }
 
     @media (max-width: 576px) {
       .carousel-inner img {
@@ -290,6 +296,21 @@
     font-size: 10px;
     line-height: 0;
   }
+  .inpContainer{
+    padding: 0 0 0 0 ;
+  }
+  .search_input{
+    display: none;
+    margin-top: 50px;
+
+  }
+  .bi-search{
+    display: block;
+    position: absolute; 
+    top: 0px;
+    margin: -19px 0 0 85px;
+  }
+  
   }
   </style>
 </head>
@@ -312,10 +333,13 @@
         </div>
 
         <!-- Search -->
-        <div class="col-md-6 col-7 mt-3 mt-md-0">
-          <div class="search-box position-relative">
-            <i class="bi bi-search"></i>
-            <input type="text" class="form-control" placeholder="Search">
+        <div class="col-md-6 col-5 mt-3 mt-md-0">
+         <div class="position-relative">
+           <i class="bi bi-search"></i>
+         </div>
+          <div class="search-box inpContainer position-relative">
+            <input type="text" class="form-control search_input" placeholder="Search">
+            <i class="bi bi-x-lg closeSearch"></i>
           </div>
         </div>
 
@@ -737,6 +761,32 @@
     </div>
 
   </footer>
+
+  <script>
+     let searchInput = document.querySelector('.search_input');
+    let searchIcon = document.querySelector('.bi-search');
+    let closeSearch = document.querySelector('.closeSearch');
+
+    searchIcon.addEventListener('click', function () {
+        searchInput.style.display = "block";
+        searchIcon.style.display = "none";
+        closeSearch.style.display = "block";
+    });
+
+    closeSearch.addEventListener('click', function () {
+        searchInput.style.display = "none";
+        closeSearch.style.display = "none";
+        searchIcon.style.display = "block";
+    });
+
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 576) {
+            searchInput.style.display = "";
+            searchIcon.style.display = "";
+            closeSearch.style.display = "";
+        }
+    });
+  </script>
 </body>
 
 </html>
